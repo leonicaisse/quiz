@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  api:
+    container_name: api
+    image: node
+    ports:
+      - "8080:8080"
+    working_dir: /home/node/app
+    volumes:
+      - ./api:/home/node/app
+    command: npm run dev
